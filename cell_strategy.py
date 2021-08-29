@@ -51,6 +51,7 @@ class ReproductionStrategy(MutationStrategy):
     cell_alive = False
 
     def check_if_should_survive(self):
+        # will be more reproductive in case of equal with 2 or 3
         if self._neighborhood_count == 3:
             return True
         raise ValueError('wrong strategy to mutate')
